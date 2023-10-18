@@ -7,20 +7,26 @@ const Categories = () => {
   const navigate = useNavigate();
   return (
     <>
-      <div className={`${styles.section} hidden sm:block`}>
-        <div
-          className={`branding my-12 flex justify-between w-full shadow-sm bg-white p-5 rounded-md`}
-        >
-          {brandingData &&
-            brandingData.map((i, index) => (
-              <div className="flex items-start" key={index}>
-                {i.icon}
-                <div className="px-3">
-                  <h3 className="font-bold text-sm md:text-base">{i.title}</h3>
-                  <p className="text-xs md:text-sm">{i.Description}</p>
-                </div>
-              </div>
-            ))}
+      <div
+        
+      >
+        <div className={`${styles.section} 800px:w-[100%]`}>
+          <div className={`${styles.section} hidden sm:block w-[100%] 900px:w-[100%] p-4`}>
+            <div
+              className={`branding my-12 flex justify-between w-full shadow-sm bg-white p-3 rounded-md`}
+            >
+              {brandingData &&
+                brandingData.map((i, index) => (
+                  <div className="flex items-start" key={index}>
+                    {i.icon}
+                    <div className="px-6">
+                      <h3 className="font-bold text-sm md:text-base">{i.title}</h3>
+                      <p className="text-xs md:text-sm">{i.Description}</p>
+                    </div>
+                  </div>
+                ))}
+            </div>
+          </div>
         </div>
       </div>
 

@@ -35,7 +35,7 @@ router.post("/create-user", async (req, res, next) => {
 
     const activationToken = createActivationToken(user);
 
-    const activationUrl = `https://eshop-tutorial-pyri.vercel.app/activation/${activationToken}`;
+    const activationUrl = `http://localhost:3000/activation/${activationToken}`;
 
     try {
       await sendMail({
@@ -51,6 +51,7 @@ router.post("/create-user", async (req, res, next) => {
       return next(new ErrorHandler(error.message, 500));
     }
   } catch (error) {
+    console.log(`ERROR: ${error}`)
     return next(new ErrorHandler(error.message, 400));
   }
 });

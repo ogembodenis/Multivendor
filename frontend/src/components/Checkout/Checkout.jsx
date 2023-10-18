@@ -27,15 +27,15 @@ const Checkout = () => {
   }, []);
 
   const paymentSubmit = () => {
-   if(address1 === "" || address2 === "" || zipCode === null || country === "" || city === ""){
+   if(address1 === "" || address2 === "" || zipCode === null /*|| country === "" || city === ""*/){
       toast.error("Please choose your delivery address!")
    } else{
     const shippingAddress = {
       address1,
       address2,
       zipCode,
-      country,
-      city,
+      // country,
+      // city,
     };
 
     const orderData = {
@@ -108,10 +108,10 @@ const Checkout = () => {
         <div className="w-full 800px:w-[65%]">
           <ShippingInfo
             user={user}
-            country={country}
-            setCountry={setCountry}
-            city={city}
-            setCity={setCity}
+            // country={country}
+            // setCountry={setCountry}
+            // city={city}
+            // setCity={setCity}
             userInfo={userInfo}
             setUserInfo={setUserInfo}
             address1={address1}
@@ -146,10 +146,10 @@ const Checkout = () => {
 
 const ShippingInfo = ({
   user,
-  country,
-  setCountry,
-  city,
-  setCity,
+  // country,
+  // setCountry,
+  // city,
+  // setCity,
   userInfo,
   setUserInfo,
   address1,
@@ -207,7 +207,7 @@ const ShippingInfo = ({
           </div>
         </div>
 
-        <div className="w-full flex pb-3">
+        {/* <div className="w-full flex pb-3">
           <div className="w-[50%]">
             <label className="block pb-2">Country</label>
             <select
@@ -244,7 +244,7 @@ const ShippingInfo = ({
                 ))}
             </select>
           </div>
-        </div>
+        </div> */}
 
         <div className="w-full flex pb-3">
           <div className="w-[50%]">
@@ -289,9 +289,9 @@ const ShippingInfo = ({
                   onClick={() =>
                     setAddress1(item.address1) ||
                     setAddress2(item.address2) ||
-                    setZipCode(item.zipCode) ||
-                    setCountry(item.country) ||
-                    setCity(item.city)
+                    setZipCode(item.zipCode)
+                    // setCountry(item.country) ||
+                    // setCity(item.city)
                   }
                 />
                 <h2>{item.addressType}</h2>
@@ -316,21 +316,21 @@ const CartData = ({
     <div className="w-full bg-[#fff] rounded-md p-5 pb-8">
       <div className="flex justify-between">
         <h3 className="text-[16px] font-[400] text-[#000000a4]">subtotal:</h3>
-        <h5 className="text-[18px] font-[600]">${subTotalPrice}</h5>
+        <h5 className="text-[18px] font-[600]">Ksh {subTotalPrice}</h5>
       </div>
       <br />
       <div className="flex justify-between">
         <h3 className="text-[16px] font-[400] text-[#000000a4]">shipping:</h3>
-        <h5 className="text-[18px] font-[600]">${shipping.toFixed(2)}</h5>
+        <h5 className="text-[18px] font-[600]">Ksh {shipping.toFixed(2)}</h5>
       </div>
       <br />
       <div className="flex justify-between border-b pb-3">
         <h3 className="text-[16px] font-[400] text-[#000000a4]">Discount:</h3>
         <h5 className="text-[18px] font-[600]">
-          - {discountPercentenge ? "$" + discountPercentenge.toString() : null}
+          - {discountPercentenge ? "Ksh" + discountPercentenge.toString() : null}
         </h5>
       </div>
-      <h5 className="text-[18px] font-[600] text-end pt-3">${totalPrice}</h5>
+      <h5 className="text-[18px] font-[600] text-end pt-3">Ksh {totalPrice}</h5>
       <br />
       <form onSubmit={handleSubmit}>
         <input
