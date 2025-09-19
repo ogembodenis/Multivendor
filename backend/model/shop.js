@@ -22,11 +22,11 @@ const shopSchema = new mongoose.Schema({
   },
   address: {
     type: String,
-    required: true,
+    required: false,
   },
   phoneNumber: {
     type: Number,
-    required: true,
+    required: false,
   },
   role: {
     type: String,
@@ -35,16 +35,16 @@ const shopSchema = new mongoose.Schema({
   avatar: {
     public_id: {
       type: String,
-      required: true,
+      required: false,
     },
     url: {
       type: String,
-      required: true,
+      required: false,
     },
   },
   zipCode: {
     type: Number,
-    required: true,
+    required: false,
   },
   withdrawMethod: {
     type: Object,
@@ -57,7 +57,7 @@ const shopSchema = new mongoose.Schema({
     {
       amount: {
         type: Number,
-        required: true,
+        required: false,
       },
       status: {
         type: String,

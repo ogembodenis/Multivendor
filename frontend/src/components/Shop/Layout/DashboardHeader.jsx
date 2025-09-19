@@ -10,14 +10,14 @@ const DashboardHeader = () => {
   const { seller } = useSelector((state) => state.seller);
   return (
     <div className="w-full h-[80px] bg-white shadow sticky top-0 left-0 z-30 flex items-center justify-between px-4">
-      <div>
+      {/* <div>
         <Link to="/dashboard">
           <img
             src="https://shopo.quomodothemes.website/assets/images/logo.svg"
             alt=""
           />
         </Link>
-      </div>
+      </div> */}
       <div className="flex items-center">
         <div className="flex items-center mr-4">
           <Link to="/dashboard/cupouns" className="800px:block hidden">

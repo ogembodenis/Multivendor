@@ -191,39 +191,95 @@ export const brandingData = [
 export const categoriesData = [
   {
     id: 1,
-    title: "Women's Clothing",
+    title: "Tecno",
     subTitle: "",
     image_Url:
-      "https://media.istockphoto.com/id/1208148708/photo/polka-dot-summer-brown-dress-suede-wedge-sandals-eco-straw-tote-bag-cosmetics-on-a-light.jpg?s=612x612&w=0&k=20&c=9Y135GYKHLlPotGIfynBbMPhXNbYeuDuFzreL_nfDE8=",
+      "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRcYQSiB9fJjUupiI6_ODnJIKd0__w1Ei2y5eFkiB5-yRerUQDNVD3A3kLQYput",
   },
   {
     id: 2,
-    title: "Men's Clothing",
+    title: "Infinix",
     subTitle: "",
     image_Url:
-      "https://media.istockphoto.com/id/822609802/photo/mens-clothing-and-personal-accessories.jpg?s=612x612&w=0&k=20&c=62-fRYCp5KUwgo-nifq4dxe6w3WROpzSHNxeIYVw1Ow=",
+      "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcR79mj_kDO3dgWNzyJzyu3U7eo_N9_rZzBqVIGseDaT-oKlASbz6UlxdCJP6uj0",
   },
   {
     id: 3,
-    title: "Kids' Clothing",
+    title: "Samsung",
     subTitle: "",
     image_Url:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZaB4lUATacStYnhcWKtrM8tnQ2sFEpcHAEg&usqp=CAU",
+      "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSWb_7H00fp_hTczoxZGxDqgYIEXw3K4-VqsW79kdKllw9cZ2-I5b9cVetGOq5Z",
   },
   {
     id: 4,
-    title: "Footwear",
+    title: "Oppo",
     subTitle: "",
     image_Url:
-      "https://www.compliancegate.com/wp-content/uploads/2020/01/shoes-footwear-regulations-us.jpg",
+      "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTdTotEAVXe-c5Gh4w-Og5EAPf_LZM06Dek7QSITfFSrofbu7PGZx6Idp5-hECS",
   },
   {
     id: 5,
-    title: "Accessories",
+    title: "Xiaomi",
     subTitle: "",
     image_Url:
-      "https://cdn3.mycity4kids.com/images/article-images/web/thumbnails/img-20170512-59158f914ef01.jpg",
-  }
+      "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcSsnNK5gTs1ZHbFgR69yA7bD42OKkLlmx1JJR0nrMxgTiL2MPdMt2K9K2cdTn80",
+  },
+  {
+    id: 6,
+    title: "Huawei",
+    subTitle: "",
+    image_Url:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxW8MxfaXXFKrXIitV79Fmj2W7DB7i5JX5n_bgj088ky3n-ZFnm4Rbb7zA1a80",
+  },
+  {
+    id: 7,
+    title: "Itel",
+    subTitle: "",
+    image_Url:
+      "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcS1DFJ30MBBi3paytqFpa0YBggeMfcBi1YjYPgFvV0Jhj3-VQ_oUe2uRROMMq9E",
+  },
+  {
+    id: 8,
+    title: "Nokia",
+    subTitle: "",
+    image_Url:
+      "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRSHRDzOK4hiX9yyewwHYINgpzJIIfSzXvGL3L22cmIa2SK6O38p5i6a8l4ckmu",
+  },
+  {
+    id: 9,
+    title: "Realme",
+    subTitle: "",
+    image_Url:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYqUssuuGh-88Dk-xOQciXaaZXQwTvvJNeOmNgcGcGmeIHSC_6RTMKzshXImx_",
+  },
+  {
+    id: 10,
+    title: "Google Pixel",
+    subTitle: "",
+    image_Url:
+      "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQVz3nDGbgvel8HPE0TElWfbPk-dQS5zJZehrRi4afIFjOeUfeGDxWVn-GAm7Jg",
+  },
+  {
+    id: 11,
+    title: "Motorola",
+    subTitle: "",
+    image_Url:
+      "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTiWiw0-AsLbXUrfIVkmKDA-z0CYiV0f2i6q3RZh2O9LJmIdBxaprjYUobG1CZ_",
+  },
+  {
+    id: 12,
+    title: "Vivo",
+    subTitle: "",
+    image_Url:
+      "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQ4VExFQ5F6R1lyoYzw3zmtlMdR3uxQ1ornzXOk5sgtxesu-PVf6KoW1OifcSIc",
+  },
+  {
+    id: 13,
+    title: "Apple",
+    subTitle: "",
+    image_Url:
+      "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRXCWWP8lUnx4TzhSiBEqiimuxa0OoXvMEZyN5eToDJd170E6wiwgVBOL1wh-vp",
+  },
 ];
 
 // product Data

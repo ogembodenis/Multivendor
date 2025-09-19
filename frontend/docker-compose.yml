@@ -1,0 +1,19 @@
+version: "3.8"
+services:
+  tt_erp_fe:
+    build:
+      context: .
+      dockerfile: Dockerfile  # Adjust the Dockerfile name if needed
+    env_file:
+      - .env.local
+    container_name: tt_erp_fe
+    ports:
+      - "3000:3000"
+    tty: true
+    restart: "no"
+    networks:
+      - tt-erp-network
+
+networks:
+  tt-erp-network:
+    driver: bridge

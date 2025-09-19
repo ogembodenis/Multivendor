@@ -1,0 +1,6 @@
+[user]
+    name = Dennis Obel
+    email = dobel@onfonmedia.com
+    host = bitbucket.org
+    HostName = git.bitbucket.org
+    IdentityFile = ~/.ssh/id_rsa

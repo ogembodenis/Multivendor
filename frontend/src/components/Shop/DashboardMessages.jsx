@@ -9,9 +9,9 @@ import styles from "../../styles/styles";
 import { TfiGallery } from "react-icons/tfi";
 import socketIO from "socket.io-client";
 import { format } from "timeago.js";
-// const ENDPOINT = "https://socket-ecommerce-tu68.onrender.com/";
-// const ENDPOINT = "https://localhost:4000/";
-const ENDPOINT = "https://shop-coms.vercel.app/";
+const ENDPOINT = "http://13.201.98.120:4000/socket";
+// const ENDPOINT = "https://localhost:4001/socket";
+// const ENDPOINT = "https://dom-socket.vercel.app/";
 const socketId = socketIO(ENDPOINT, { transports: ["websocket"] });
 
 const DashboardMessages = () => {

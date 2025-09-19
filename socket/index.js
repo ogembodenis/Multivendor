@@ -5,6 +5,7 @@ const cors = require("cors");
 const app = express();
 const server = http.createServer(app);
 const io = socketIO(server);
+const nsp = io.of("/socket")
 
 require("dotenv").config({
   path: "./.env",
@@ -41,7 +42,9 @@ const createMessage = ({ senderId, receiverId, text, images }) => ({
   seen: false,
 });
 
-io.on("connection", (socket) => {
+
+
+nsp.on("connection", (socket) => {
   // when connect
   console.log(`a user is connected`);
 
@@ -108,6 +111,11 @@ io.on("connection", (socket) => {
   });
 });
 
-server.listen(process.env.PORT || 4000, () => {
-  console.log(`server is running on port ${process.env.PORT || 4000}`);
+server.listen(process.env.SOCKET_PORT || 4000, () => {
+  console.log(`server is running on port ${process.env.SOCKET_PORT || 4000}`);
 });
+
+// server.listen(process.env.SOCKET_PORT || 4001, { path: "/socket" }, () => {
+//   console.log(`server is running on port ${process.env.SOCKET_PORT || 4001} and path /socket`);
+// });
+

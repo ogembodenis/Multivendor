@@ -1,0 +1,19 @@
+version: "3.8"
+services:
+  socket_app:
+    restart: "no"
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./logs:/app/logs
+    env_file:
+      - .env
+    container_name: tt_erp_socket
+    networks:
+      - tech-tide-erp
+    ports:
+      - "4000:4000"
+
+networks:
+  tech-tide-erp:

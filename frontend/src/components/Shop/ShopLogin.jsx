@@ -1,7 +1,7 @@
 import { React, useEffect, useState } from "react";
 import { AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/ai";
 import styles from "../../styles/styles";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate, redirect } from "react-router-dom";
 import axios from "axios";
 import { server } from "../../server";
 import { toast } from "react-toastify";
@@ -14,25 +14,33 @@ const ShopLogin = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
-    await axios
-      .post(
+  
+    try {
+      const res = await axios.post(
         `${server}/shop/login-shop`,
         {
           email,
           password,
         },
         { withCredentials: true }
-      )
-      .then((res) => {
-        toast.success("Login Success!");
-        navigate("/dashboard");
-        window.location.reload(true); 
-      })
-      .catch((err) => {
-        toast.error(err.response.data.message);
-      });
+      );
+  
+      toast.success("Login Success!");
+  
+      // Use setTimeout for redirection after showing the toast
+      setTimeout(() => {
+        navigate("/dashboard", { replace: true });
+  
+        // Use another setTimeout for reloading after redirection
+        setTimeout(() => {
+          window.location.reload(true);
+        }, 0);
+      }, 0);
+    } catch (err) {
+      toast.error(err.response?.data?.message || "Login failed");
+    }
   };
+  
 
   return (
     <div className="min-h-screen bg-gray-50 flex flex-col justify-center py-12 sm:px-6 lg:px-8">

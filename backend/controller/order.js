@@ -124,9 +124,10 @@ router.put(
 
       async function updateOrder(id, qty) {
         const product = await Product.findById(id);
-
+        console.log("product before:", product)
         product.stock -= qty;
         product.sold_out += qty;
+        console.log("product after:", product)
 
         await product.save({ validateBeforeSave: false });
       }
@@ -214,8 +215,8 @@ router.put(
 // all orders --- for admin
 router.get(
   "/admin-all-orders",
-  isAuthenticated,
-  isAdmin("Admin"),
+  // isAuthenticated,
+  // isAdmin("Admin"),
   catchAsyncErrors(async (req, res, next) => {
     try {
       const orders = await Order.find().sort({
